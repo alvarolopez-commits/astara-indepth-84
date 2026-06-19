@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Electric Trucks: Global Industry Report 2026 | Astara Intelligence In Depth #84</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700;800;900&family=Inter:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0e2236;--bg-dark:#041425;--bg-card:#1e3452;--bg-mid:#1a2e47;
+  --border:#2e5072;--accent:#8bcdff;--accent2:#b1c28c;--accent3:#e07a5f;
+  --txt:#f0f4f8;--txt-sec:#cfe0f0;--txt-muted:#7a9ab8;
+  --font-d:'Orbitron',sans-serif;--font-b:'Inter',sans-serif;--font-e:'Montserrat',sans-serif;
+  --g:16px;--ease:cubic-bezier(0.16,1,0.3,1);--r:12px;
+}
+@media(min-width:480px){:root{--g:22px;}}
+@media(min-width:768px){:root{--g:40px;}}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;overflow-x:hidden;}
+body{background:var(--bg);color:var(--txt-sec);font-family:var(--font-b);-webkit-font-smoothing:antialiased;overflow-x:hidden;word-break:break-word;overflow-wrap:break-word;}
+img{max-width:100%;height:auto;display:block;}
+
+/* ── COVER ── */
+.cover{position:relative;min-height:92svh;padding:0 var(--g) 48px;display:flex;flex-direction:column;justify-content:flex-end;overflow:hidden;background:var(--bg-dark);}
+.cover-bg{position:absolute;inset:0;pointer-events:none;}
+.cover-svg{position:absolute;inset:0;width:100%;height:100%;}
+.cover-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;}
+.cover-grad{position:absolute;inset:0;background:linear-gradient(to bottom,rgba(4,20,37,.6) 0%,rgba(4,20,37,.15) 28%,rgba(4,20,37,.4) 55%,rgba(4,20,37,.95) 80%,var(--bg-dark) 100%);}
+.cover-content{position:relative;z-index:2;max-width:580px;}
+.cover-brand{display:flex;align-items:center;gap:10px;margin-bottom:32px;}
+.cover-brand-name{font-family:var(--font-d);font-size:9px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--txt-muted);}
+.cover-brand-name span{color:var(--accent);}
+.cover-sep{width:1px;height:16px;background:rgba(255,255,255,.2);}
+.cover-num{font-family:var(--font-d);font-size:9px;font-weight:900;letter-spacing:2px;color:var(--accent);}
+.cover-tag{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--accent);border:1px solid rgba(139,205,255,.3);padding:5px 12px;border-radius:20px;margin-bottom:22px;}
+.cover-tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--accent);animation:blink 2s ease-in-out infinite;}
+@keyframes blink{0%,100%{opacity:1;}50%{opacity:.4;}}
+.cover-title{font-family:var(--font-d);font-weight:900;font-size:clamp(30px,9.5vw,76px);line-height:1.04;color:var(--txt);margin-bottom:16px;letter-spacing:-0.02em;}
+.cover-title em{color:var(--accent);font-style:normal;display:block;}
+.cover-sub{font-family:var(--font-e);font-size:clamp(13px,3.6vw,16px);font-weight:400;line-height:1.7;color:var(--txt-sec);max-width:480px;}
+
+/* ── STAT STRIP ── */
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:1px;background:var(--border);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.stat{background:var(--bg-dark);padding:22px 16px;}
+.stat-n{font-family:var(--font-d);font-size:clamp(30px,8.5vw,54px);font-weight:900;color:var(--accent);line-height:1;margin-bottom:5px;}
+.stat-n sup{font-size:.44em;vertical-align:super;}
+.stat-n.g{color:var(--accent2);}.stat-n.o{color:var(--accent3);}
+.stat-l{font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-muted);line-height:1.4;}
+.stat-note{font-family:var(--font-b);font-size:10px;color:var(--txt-muted);margin-top:4px;line-height:1.35;}
+
+/* ── CHAPTERS ── */
+.ch{padding:32px var(--g);}
+.ch.dark{background:var(--bg-dark);padding:32px var(--g);}
+.ch.mid{background:var(--bg-mid);padding:32px var(--g);}
+.ch-label{display:flex;align-items:center;gap:9px;margin-bottom:12px;}
+.ch-num{font-family:var(--font-d);font-size:10px;font-weight:900;color:var(--accent);letter-spacing:1px;}
+.ch-tag{font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--txt-muted);}
+.ch-title{font-family:var(--font-d);font-weight:800;font-size:clamp(20px,6.5vw,38px);color:var(--txt);line-height:1.12;margin-bottom:18px;}
+.ch-title em{color:var(--accent);font-style:normal;}
+.ch-title strong{color:var(--accent2);}
+.lead{font-family:var(--font-e);font-size:clamp(13px,3.5vw,16px);font-weight:500;line-height:1.75;color:var(--txt-sec);margin-bottom:14px;}
+.body{font-family:var(--font-b);font-size:clamp(12px,3.2vw,14px);line-height:1.82;color:var(--txt-muted);margin-bottom:12px;}
+.body:last-child{margin-bottom:0;}
+
+/* ── PULL QUOTE ── */
+.pq{border-left:3px solid var(--accent);padding:12px 16px;margin:20px 0;background:rgba(139,205,255,.04);border-radius:0 8px 8px 0;}
+.pq p{font-family:var(--font-e);font-size:clamp(13px,3.5vw,15px);font-weight:500;line-height:1.65;color:var(--txt);font-style:italic;}
+
+/* ── INSIGHT BOX ── */
+.insight{background:rgba(139,205,255,.05);border:1px solid rgba(139,205,255,.2);border-radius:var(--r);padding:16px;margin:16px 0;}
+.insight-t{font-family:var(--font-d);font-size:10px;font-weight:800;color:var(--accent);letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;}
+.insight-b{font-family:var(--font-b);font-size:clamp(11px,3vw,13px);line-height:1.72;color:var(--txt-sec);}
+.insight.warn{border-color:rgba(224,122,95,.25);background:rgba(224,122,95,.05);}
+.insight.warn .insight-t{color:var(--accent3);}
+
+/* ── BAR CHART ── */
+.chart-lbl{font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-muted);margin-bottom:16px;}
+.bar-row{margin-bottom:14px;}
+.bar-hd{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:5px;gap:8px;}
+.bar-name{font-family:var(--font-b);font-size:12px;font-weight:600;color:var(--txt-sec);}
+.bar-val{font-family:var(--font-d);font-size:12px;font-weight:900;color:var(--accent);white-space:nowrap;flex-shrink:0;}
+.bar-val.g{color:var(--accent2);}.bar-val.o{color:var(--accent3);}.bar-val.m{color:var(--txt-muted);}
+.bar-track{height:5px;background:rgba(46,80,114,.5);border-radius:3px;overflow:hidden;}
+.bar-fill{height:100%;border-radius:3px;background:var(--accent);animation:barIn 1.2s var(--ease) both;}
+.bar-fill.g{background:var(--accent2);}.bar-fill.o{background:var(--accent3);}.bar-fill.m{background:var(--txt-muted);}
+@keyframes barIn{from{width:0!important;}}
+
+/* ── STACKED BARS ── */
+.legend{display:flex;flex-wrap:wrap;gap:8px 14px;margin:14px 0;}
+.leg-item{display:flex;align-items:center;gap:6px;font-family:var(--font-b);font-size:10px;font-weight:600;color:var(--txt-muted);}
+.leg-dot{width:10px;height:10px;border-radius:2px;flex-shrink:0;}
+.stk-yr{margin-bottom:16px;}
+.stk-lbl{font-family:var(--font-b);font-size:11px;font-weight:700;color:var(--txt-muted);letter-spacing:.8px;margin-bottom:5px;}
+.stk-bar{display:flex;height:24px;border-radius:4px;overflow:hidden;gap:1px;}
+.stk-seg{height:100%;display:flex;align-items:center;justify-content:center;font-family:var(--font-b);font-size:9px;font-weight:700;color:var(--bg-dark);white-space:nowrap;overflow:hidden;min-width:0;}
+.ev{background:var(--accent);}.fc{background:var(--accent2);}.ng{background:var(--accent3);}.ic{background:rgba(139,205,255,.22);color:var(--txt-muted);}
+
+/* ── TCO CARDS ── */
+.tco-grid{display:grid;grid-template-columns:1fr;gap:10px;margin-top:20px;}
+.tco-card{background:var(--bg-card);border:1px solid var(--border);border-radius:var(--r);padding:16px;border-top:3px solid var(--border);}
+.tco-card.bev{border-top-color:var(--accent);}.tco-card.gas{border-top-color:var(--accent2);}.tco-card.dsl{border-top-color:var(--accent3);}
+.tco-name{font-family:var(--font-d);font-size:11px;font-weight:800;color:var(--txt);text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;}
+.tco-total{font-family:var(--font-d);font-size:30px;font-weight:900;color:var(--accent);line-height:1;margin-bottom:4px;}
+.tco-card.gas .tco-total{color:var(--accent2);}.tco-card.dsl .tco-total{color:var(--accent3);}
+.tco-unit{font-family:var(--font-b);font-size:9px;color:var(--txt-muted);letter-spacing:1px;text-transform:uppercase;margin-bottom:12px;}
+.tco-row{display:flex;justify-content:space-between;padding:5px 0;border-bottom:1px solid rgba(46,80,114,.35);font-family:var(--font-b);font-size:11px;}
+.tco-row:last-child{border-bottom:none;}
+.tco-row span:first-child{color:var(--txt-muted);}
+.tco-row span:last-child{color:var(--txt-sec);font-weight:600;}
+
+/* ── PLAYER GRID ── */
+.player-sec{margin-top:22px;}
+.player-sec-title{font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--txt-muted);padding-bottom:8px;border-bottom:1px solid var(--border);margin-bottom:12px;}
+.player-grid{display:grid;grid-template-columns:1fr 1fr;gap:8px;}
+.player-card{background:var(--bg-card);border:1px solid var(--border);border-radius:10px;padding:13px 12px;}
+.pc-group{font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-muted);margin-bottom:4px;}
+.pc-brand{font-family:var(--font-d);font-size:11px;font-weight:800;color:var(--txt);margin-bottom:5px;line-height:1.2;}
+.pc-origin{font-family:var(--font-b);font-size:10px;color:var(--accent);margin-bottom:5px;}
+.pc-models{font-family:var(--font-b);font-size:10px;line-height:1.5;color:var(--txt-muted);}
+
+/* ── SPEC TABLE ── */
+.spec-wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;margin:14px 0;border-radius:8px;border:1px solid var(--border);}
+.spec-hint{display:block;font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-muted);text-align:center;padding:8px 16px 0;}
+@media(min-width:700px){.spec-hint{display:none;}}
+.spec-table{min-width:600px;border-collapse:collapse;width:100%;}
+.spec-table th{font-family:var(--font-b);font-size:9px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-muted);text-align:left;padding:10px 11px;border-bottom:1px solid var(--border);white-space:nowrap;background:var(--bg-dark);}
+.spec-table td{font-family:var(--font-b);font-size:12px;color:var(--txt-sec);padding:11px 11px;border-bottom:1px solid rgba(46,80,114,.3);vertical-align:middle;}
+.spec-table td:first-child{color:var(--txt);font-weight:600;}
+.spec-table tr:last-child td{border-bottom:none;}
+.hi{color:var(--accent)!important;font-family:var(--font-d)!important;font-size:11px!important;font-weight:900!important;}
+.badge{display:inline-block;font-family:var(--font-b);font-size:8px;font-weight:700;letter-spacing:1px;text-transform:uppercase;padding:2px 7px;border-radius:4px;white-space:nowrap;}
+.badge.prod{color:var(--accent);border:1px solid rgba(139,205,255,.3);}
+.badge.roll{color:var(--accent2);border:1px solid rgba(177,194,140,.3);}
+.badge.rec{color:var(--accent3);border:1px solid rgba(224,122,95,.3);}
+
+/* ── OPTION X ── */
+.optx{background:var(--bg-dark);border-top:3px solid var(--accent3);padding:32px var(--g);}
+.optx-badge{display:inline-flex;align-items:center;gap:6px;font-family:var(--font-d);font-size:9px;font-weight:900;letter-spacing:2px;text-transform:uppercase;color:var(--accent3);border:1px solid rgba(224,122,95,.4);padding:5px 12px;border-radius:20px;margin-bottom:16px;}
+
+/* ── CONCLUSION ── */
+.concl{background:var(--bg-dark);padding:36px var(--g);}
+.concl-line{width:40px;height:3px;background:var(--accent);border-radius:2px;margin-bottom:20px;}
+.concl-title{font-family:var(--font-d);font-weight:800;font-size:clamp(18px,5.5vw,30px);color:var(--txt);line-height:1.2;margin-bottom:14px;}
+.concl-title em{color:var(--accent);font-style:normal;}
+.concl-list{list-style:none;padding:0;margin:18px 0 0;}
+.concl-list li{font-family:var(--font-b);font-size:clamp(12px,3vw,13px);line-height:1.75;color:var(--txt-sec);padding:10px 0;border-bottom:1px solid rgba(46,80,114,.35);display:flex;align-items:flex-start;gap:10px;}
+.concl-list li::before{content:'';display:inline-block;width:5px;height:5px;min-width:5px;border-radius:50%;background:var(--accent);margin-top:7px;}
+.concl-list li:last-child{border-bottom:none;}
+.concl-list b{color:var(--txt);font-weight:600;}
+
+/* ── TRUCK CARDS ── */
+.truck-grid{display:flex;flex-direction:column;gap:14px;margin:20px 0;}
+.truck-card{border-radius:10px;border:1px solid var(--border);overflow:hidden;background:var(--bg-card);transition:border-color .25s;}
+.truck-card:hover{border-color:rgba(139,205,255,.35);}
+.truck-img-wrap{position:relative;width:100%;overflow:hidden;background:var(--bg-dark);}
+.truck-img{width:100%;height:auto;display:block;transition:transform .5s ease;}
+.truck-card:hover .truck-img{transform:scale(1.03);}
+.truck-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,transparent 55%,rgba(14,34,54,.8) 100%);pointer-events:none;}
+.truck-badge-ov{position:absolute;bottom:10px;left:12px;z-index:2;}
+.truck-info{padding:13px 14px 15px;}
+.truck-name{font-family:var(--font-d);font-size:clamp(11px,3.2vw,14px);font-weight:700;color:var(--txt);letter-spacing:.5px;display:block;margin-bottom:12px;line-height:1.3;}
+.truck-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px 8px;}
+.tstat{display:flex;flex-direction:column;gap:2px;}
+.tstat-v{font-family:var(--font-d);font-size:14px;font-weight:900;color:var(--txt);line-height:1;}
+.tstat-v.acc{color:var(--accent);}
+.tstat-k{font-family:var(--font-b);font-size:9px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;color:var(--txt-muted);}
+@media(min-width:500px){.truck-grid{display:grid;grid-template-columns:1fr 1fr;}.truck-img-wrap{height:190px;}.truck-img{height:100%;object-fit:cover;object-position:center;}}
+/* ── MOTA IMAGE ── */
+.mota-img-wrap{margin:-48px calc(-1 * var(--g)) 30px;position:relative;overflow:hidden;max-height:220px;}
+.mota-img{width:100%;height:100%;object-fit:cover;object-position:center;display:block;}
+.mota-img-wrap::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(7,16,26,.1) 0%,rgba(7,16,26,.82) 78%,#07101a 100%);pointer-events:none;}
+
+/* ── MOTA RECORD SECTION ── */
+.mota-section{background:linear-gradient(160deg,#07101a 0%,#0d1e2e 55%,#07101a 100%);border-top:2px solid var(--accent3);border-bottom:2px solid var(--accent3);padding:48px var(--g) 40px;text-align:center;position:relative;overflow:hidden;}
+.mota-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 80% 60% at 50% 0%,rgba(224,122,95,.1) 0%,transparent 70%);pointer-events:none;}
+.mota-record-badge{display:inline-flex;align-items:center;gap:7px;font-family:var(--font-d);font-size:8px;font-weight:700;letter-spacing:2.5px;text-transform:uppercase;color:var(--accent3);border:1px solid rgba(224,122,95,.4);padding:5px 14px;border-radius:2px;margin-bottom:18px;}
+.mota-model{font-family:var(--font-d);font-size:clamp(11px,3vw,14px);font-weight:700;letter-spacing:4px;text-transform:uppercase;color:rgba(255,255,255,.35);margin-bottom:16px;}
+.mota-hero-num{font-family:var(--font-d);font-size:clamp(64px,19vw,108px);font-weight:900;line-height:1.1;background:linear-gradient(135deg,#e07a5f 0%,#f0a882 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;letter-spacing:-1px;margin-bottom:10px;display:block;}
+.mota-hero-unit{font-family:var(--font-d);font-size:clamp(13px,3.5vw,20px);font-weight:700;letter-spacing:3px;color:rgba(224,122,95,.6);text-transform:uppercase;margin-bottom:10px;display:block;}
+.mota-hero-sub{font-family:var(--font-b);font-size:10px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.25);margin-bottom:30px;display:block;}
+.mota-kpis{display:flex;justify-content:center;gap:0;margin:0 auto 28px;max-width:min(340px,100%);border:1px solid rgba(46,80,114,.5);border-radius:6px;overflow:hidden;}
+.mota-kpi{flex:1;padding:14px 6px;border-right:1px solid rgba(46,80,114,.5);min-width:0;}
+.mota-kpi:last-child{border-right:none;}
+.mota-kpi-val{font-family:var(--font-d);font-size:clamp(12px,4vw,18px);font-weight:900;color:var(--txt);display:block;margin-bottom:3px;}
+.mota-kpi-key{font-family:var(--font-b);font-size:8px;font-weight:600;letter-spacing:1px;text-transform:uppercase;color:var(--txt-muted);display:block;}
+.mota-context{font-family:var(--font-b);font-size:clamp(11px,3vw,12px);font-style:italic;line-height:1.7;color:var(--txt-sec);max-width:min(360px,100%);margin:0 auto 16px;}
+.mota-note{font-family:var(--font-b);font-size:10px;line-height:1.6;color:rgba(255,255,255,.22);max-width:min(340px,100%);margin:0 auto;border-top:1px solid rgba(46,80,114,.3);padding-top:14px;}
+
+/* ── LOGO ── */
+.cover-logo{height:20px;width:auto;display:block;}
+.footer-logo{height:14px;width:auto;display:block;opacity:.55;}
+@media(min-width:480px){.cover-logo{height:24px;}}
+
+/* ── FOOTER ── */
+.footer{background:var(--bg-dark);padding:28px var(--g);border-top:1px solid var(--border);display:flex;flex-direction:column;gap:12px;}
+.footer-note{font-family:var(--font-b);font-size:10px;line-height:1.6;color:var(--txt-muted);}
+.footer-issue{font-family:var(--font-d);font-size:9px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:rgba(139,205,255,.28);}
+
+/* ── REVEAL ── */
+.rv{opacity:0;transform:translateY(18px);transition:opacity .5s var(--ease),transform .5s var(--ease);}
+.rv.on{opacity:1;transform:none;}
+.d1{transition-delay:80ms;}.d2{transition-delay:160ms;}.d3{transition-delay:240ms;}.d4{transition-delay:320ms;}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none;}}
+@media(max-width:479px){
+  .cover{min-height:85svh;}
+  .player-grid{grid-template-columns:1fr;}
+  .tco-grid{grid-template-columns:1fr;}
+  .ch,.ch.dark,.ch.mid{padding:26px var(--g);}
+  .mota-hero-sub{letter-spacing:1px;font-size:9px;}
+  .mota-model{letter-spacing:2px;}
+  .stk-seg{font-size:0;}
+  .pc-brand{font-size:10px;}
+  .tstat-v{font-size:13px;}
+  .truck-info{padding:11px 12px 13px;}
+  .concl-list li{font-size:12px;}
+  .bar-name{font-size:11px;}
+  .mota-section{padding:48px var(--g) 32px;}
+}
+</style>
+</head>
+<body>
+
+<!-- ══════════════ COVER ══════════════ -->
+<section class="cover">
+  <div class="cover-bg">
+    <img src="DEPLOY/_%2384.jpg" class="cover-photo" alt="">
+    <div class="cover-grad"></div>
+  </div>
+
+  <div class="cover-content rv">
+    <div class="cover-brand">
+      <svg class="cover-logo" viewBox="0 0 421.74 30.13" xmlns="http://www.w3.org/2000/svg" aria-label="Astara Intelligence" role="img"><defs><style>.ai-st0{opacity:.4}.ai-st1{fill:#fff}.ai-st2{isolation:isolate}</style></defs><g><g class="ai-st2"><g class="ai-st2"><path class="ai-st1" d="M154.37,26.92V3.8h4.29v23.12h-4.29Z"/><path class="ai-st1" d="M164.91,26.92V3.8h3.53l14.5,17.84h-1.75V3.8h4.23v23.12h-3.53l-14.47-17.84h1.75v17.84h-4.26Z"/><path class="ai-st1" d="M196.36,26.92V7.43h-7.66v-3.63h19.62v3.63h-7.66v19.49h-4.29Z"/><path class="ai-st1" d="M215.85,23.29h13.05v3.63h-17.34V3.8h16.88v3.63h-12.59v15.86ZM215.52,13.41h11.5v3.54h-11.5v-3.54Z"/><path class="ai-st1" d="M233.69,26.92V3.8h4.29v19.49h12.09v3.63h-16.38Z"/><path class="ai-st1" d="M253.47,26.92V3.8h4.29v19.49h12.09v3.63h-16.38Z"/><path class="ai-st1" d="M273.26,26.92V3.8h4.29v23.12h-4.29Z"/><path class="ai-st1" d="M294.6,27.25c-1.81,0-3.46-.29-4.97-.88s-2.82-1.42-3.95-2.49c-1.12-1.08-1.99-2.33-2.61-3.77-.62-1.43-.93-3.02-.93-4.76s.31-3.33.93-4.76c.62-1.43,1.49-2.69,2.63-3.77,1.13-1.08,2.46-1.91,3.96-2.49,1.51-.58,3.19-.88,5.04-.88s3.69.32,5.27.96c1.57.64,2.9,1.58,3.98,2.81l-2.71,2.64c-.9-.9-1.88-1.57-2.92-2-1.05-.43-2.2-.64-3.45-.64s-2.36.2-3.39.59c-1.02.4-1.91.96-2.66,1.68-.75.73-1.33,1.59-1.75,2.58-.42.99-.63,2.08-.63,3.27s.21,2.25.63,3.25c.42,1,1,1.87,1.75,2.59.75.73,1.63,1.29,2.64,1.68,1.01.4,2.14.59,3.37.59,1.14,0,2.25-.18,3.32-.54,1.07-.36,2.09-.97,3.06-1.83l2.41,3.2c-1.19.97-2.58,1.7-4.16,2.2-1.59.5-3.21.74-4.86.74ZM299.59,23.75v-8.62h4.03v9.18l-4.03-.56Z"/><path class="ai-st1" d="M313.59,23.29h13.05v3.63h-17.34V3.8h16.88v3.63h-12.59v15.86ZM313.26,13.41h11.5v3.54h-11.5v-3.54Z"/><path class="ai-st1" d="M331.43,26.92V3.8h3.53l14.5,17.84h-1.75V3.8h4.23v23.12h-3.53l-14.47-17.84h1.75v17.84h-4.26Z"/><path class="ai-st1" d="M368.89,27.25c-1.78,0-3.42-.29-4.92-.88-1.5-.58-2.8-1.42-3.91-2.49-1.11-1.08-1.98-2.33-2.59-3.77-.62-1.43-.93-3.02-.93-4.76s.31-3.33.93-4.76c.62-1.43,1.49-2.69,2.61-3.77,1.12-1.08,2.43-1.91,3.93-2.49,1.5-.58,3.14-.88,4.92-.88,1.89,0,3.62.33,5.19.97s2.88,1.61,3.96,2.89l-2.78,2.61c-.86-.9-1.81-1.58-2.84-2.03s-2.15-.68-3.34-.68-2.32.2-3.32.59c-1,.4-1.87.96-2.61,1.68-.74.73-1.32,1.59-1.73,2.58-.42.99-.63,2.08-.63,3.27s.21,2.28.63,3.27c.42.99,1,1.85,1.73,2.58.74.73,1.61,1.29,2.61,1.68,1,.4,2.11.59,3.32.59s2.3-.23,3.34-.68,1.98-1.14,2.84-2.06l2.78,2.61c-1.08,1.28-2.4,2.25-3.96,2.91-1.56.66-3.3.99-5.22.99Z"/><path class="ai-st1" d="M386.5,23.29h13.05v3.63h-17.34V3.8h16.88v3.63h-12.59v15.86ZM386.17,13.41h11.5v3.54h-11.5v-3.54Z"/></g></g><g class="ai-st0"><path class="ai-st1" d="M23.35,15.51c-.04-4.72-3.89-8.51-8.61-8.48-4.72.04-8.51,3.89-8.48,8.61.04,4.69,3.85,8.48,8.54,8.48,4.73-.02,8.56-3.87,8.54-8.6,0,0,0,0,0,0M27.02,15.51v10.84c0,.29-.24.52-.53.53h-2.6c-.29,0-.53-.23-.53-.52,0,0,0-.01,0-.02v-2.87c-2.17,2.6-5.24,3.97-8.61,3.97-6.77,0-12.14-5.3-12.14-11.94S7.97,3.56,14.81,3.56s12.21,5.3,12.21,11.94h0Z"/><path class="ai-st1" d="M31.22,26.88c-.31,0-.56-.25-.57-.56,0,0,0,0,0,0v-2.2c0-.31.26-.56.57-.57h11.84c2.13,0,3.54-1.43,3.54-3.24s-1.4-3.04-3.54-3.27l-6.24-.7c-3.8-.43-6.81-2.77-6.81-6.34s3.04-6.47,7.21-6.47h10.34c.31,0,.56.25.57.56,0,0,0,0,0,0v2.2c0,.31-.26.56-.57.57h-10.34c-2.13,0-3.54,1.43-3.54,3.1s1.4,2.87,3.54,3.1l6.24.7c3.8.43,6.81,2.8,6.81,6.47s-3.04,6.64-7.21,6.64h-11.84Z"/><path class="ai-st1" d="M71.02,3.53c.3-.01.55.22.57.52,0,.02,0,.03,0,.05v2.2c0,.31-.25.56-.56.57,0,0,0,0,0,0h-7.84v19.45c.01.3-.22.55-.52.57-.02,0-.03,0-.05,0h-2.54c-.3.01-.55-.22-.57-.52,0-.02,0-.03,0-.05V6.87h-7.84c-.31,0-.56-.23-.57-.54,0-.02,0-.04,0-.07v-2.17c-.01-.3.22-.55.52-.57.02,0,.03,0,.05,0h19.35Z"/><path class="ai-st1" d="M92.67,15.51c-.04-4.72-3.89-8.51-8.61-8.48-4.72.04-8.51,3.89-8.48,8.61.04,4.69,3.85,8.48,8.54,8.48,4.73-.02,8.56-3.87,8.54-8.6,0,0,0,0,0,0M96.34,15.51v10.84c0,.29-.24.52-.53.53h-2.6c-.29,0-.53-.23-.53-.52,0,0,0-.01,0-.02v-2.87c-2.17,2.6-5.24,3.97-8.61,3.97-6.77,0-12.14-5.3-12.14-11.94s5.37-11.94,12.21-11.94,12.21,5.3,12.21,11.94h0Z"/><path class="ai-st1" d="M113.59,4.1v2.27c0,.29-.24.53-.53.53-5.54.33-8.71,3.14-8.71,7.37v12.04c0,.31-.25.56-.56.57,0,0,0,0,0,0h-2.54c-.3.01-.55-.22-.57-.52,0-.02,0-.03,0-.05V4.1c-.01-.3.22-.55.52-.57.02,0,.03,0,.05,0h2.54c.31,0,.56.25.57.56,0,0,0,0,0,0v2.8c2.03-2.03,4.9-3.24,8.64-3.37.31-.02.58.23.6.54,0,0,0,.02,0,.03h0Z"/><path class="ai-st1" d="M135.01,15.51c-.04-4.72-3.89-8.51-8.61-8.48-4.72.04-8.51,3.89-8.48,8.61.04,4.69,3.85,8.48,8.54,8.48,4.73-.02,8.56-3.87,8.54-8.6,0,0,0,0,0,0M138.68,15.51v10.84c0,.29-.24.52-.53.53h-2.6c-.29,0-.53-.23-.53-.52,0,0,0-.01,0-.02v-2.87c-2.17,2.6-5.24,3.97-8.61,3.97-6.77,0-12.14-5.3-12.14-11.94s5.37-11.94,12.21-11.94,12.21,5.3,12.21,11.94h0Z"/></g></g></svg>
+      <div class="cover-sep"></div>
+      <span class="cover-num">IN DEPTH #84</span>
+    </div>
+    <div class="cover-tag">Industry Report &middot; June 2026</div>
+    <h1 class="cover-title">ELECTRIC<em>TRUCKS</em>GO GLOBAL</h1>
+    <p class="cover-sub">440,000 electric trucks sold in 2025. A market that doubled in 12 months. But behind the headline, one country is doing all the heavy lifting. And the gap is widening.</p>
+  </div>
+</section>
+
+<!-- ══════════════ STATS ══════════════ -->
+<div class="stats">
+  <div class="stat rv"><div class="stat-n">440<sup>K</sup></div><div class="stat-l">EV trucks sold</div><div class="stat-note">Global 2025</div></div>
+  <div class="stat rv d1"><div class="stat-n g">×2</div><div class="stat-l">YoY growth</div><div class="stat-note">220K → 440K units</div></div>
+  <div class="stat rv d2"><div class="stat-n">9<sup>%</sup></div><div class="stat-l">Market share</div><div class="stat-note">Up from 4.5% in 2024</div></div>
+  <div class="stat rv d3"><div class="stat-n o">19<sup>×</sup></div><div class="stat-l">China vs. world</div><div class="stat-note">405K vs. 21.4K rest</div></div>
+</div>
+
+<!-- ══════════════ CH 01: OVERVIEW ══════════════ -->
+<section class="ch dark">
+  <div class="ch-label rv"><span class="ch-num">01</span><span class="ch-tag">Overview</span></div>
+  <h2 class="ch-title rv">The Long Haul<br><em>Goes Electric</em></h2>
+  <p class="lead rv">In 2026, doubting electric mobility in passenger vehicles requires willful ignorance. The numbers are too clear. But heavy trucks? Until recently, they were the last holdout.</p>
+  <p class="body rv">2025 changed that. Electric truck sales doubled globally, from 220,000 to 440,000 units. Market share climbed from 4.5% to 9%: a milestone that puts heavy transport on the same trajectory passenger EVs were on in 2019–2020.</p>
+  <p class="body rv">97% of those sales are battery electric. The industry isn't hedging on hydrogen or range extenders: it's betting on pure BEV. But two structural challenges remain that passenger EVs never faced at this scale.</p>
+
+  <div class="insight rv">
+    <div class="insight-t">Challenge 1: Range</div>
+    <div class="insight-b">Passenger EVs now routinely exceed 700km. Trucks carry larger packs but also heavier loads over longer distances. Today's long-haul EV trucks are closing the gap fast (the best models already reach 700-800km), but the infrastructure to exploit that range in commercial operations isn't yet there.</div>
+  </div>
+  <div class="insight rv">
+    <div class="insight-t">Challenge 2: Charging Infrastructure</div>
+    <div class="insight-b">A medium truck on urban routes returns to a private depot every night. A long-haul heavy truck covering 1,000km has nowhere to charge fast enough. Battery packs on heavy trucks require ultra-rapid charging (400kW+); standard public EV chargers are irrelevant.</div>
+  </div>
+
+  <div class="pq rv"><p>"The commercial freight industry operates on razor-thin margins. For fleet operators, switching to EV trucks is a purely mathematical decision. The math is starting to work."</p></div>
+</section>
+
+<!-- ══════════════ CH 02: CHINA ══════════════ -->
+<section class="ch mid">
+  <div class="ch-label rv"><span class="ch-num">02</span><span class="ch-tag">Market Concentration</span></div>
+  <h2 class="ch-title rv">China Is Not<br><strong>Dominating</strong>.<br><em>China Is the Market.</em></h2>
+  <p class="lead rv">Add up every EV truck sold outside China (Europe, North America, and the rest of the world combined). You still don't come close to China's number.</p>
+
+  <div class="chart-lbl rv" style="margin-top:20px;">EV truck sales by region, 2025 (thousands of units)</div>
+  <div class="rv">
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name">China</span><span class="bar-val">405K</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:95%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name">Europe</span><span class="bar-val g">16.8K</span></div>
+      <div class="bar-track"><div class="bar-fill g" style="width:3.9%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name">North America</span><span class="bar-val o">3.4K</span></div>
+      <div class="bar-track"><div class="bar-fill o" style="width:0.8%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name">Rest of world</span><span class="bar-val m">1.2K</span></div>
+      <div class="bar-track"><div class="bar-fill m" style="width:0.3%"></div></div>
+    </div>
+  </div>
+
+  <p class="body rv" style="margin-top:18px;">The gap has been growing consistently since 2020. China was at 15,000 units that year, already ahead. By 2025, it was at 405,000. Europe went from near-zero to 16,800, a real gain, but still 24× smaller than China's market. North America is barely on the chart.</p>
+
+  <div class="insight rv">
+    <div class="insight-t">Why China pulled so far ahead</div>
+    <div class="insight-b">Three forces combined: (1) urban delivery zones that banned diesel, forcing fleet electrification; (2) state-supported private depot charging and a network of commercial battery swap stations, solving the charging problem without waiting for public infrastructure; (3) an intensely competitive domestic manufacturing base (BYD, SANY, Sinotruk, FAW) that compressed prices faster than anywhere else.</div>
+  </div>
+
+  <p class="body rv">The trajectory from 2020 to 2025 by region:</p>
+  <div class="rv" style="margin-top:10px;">
+    <div class="chart-lbl">China vs. Europe: growth in thousands</div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name" style="font-size:10px;">China 2020</span><span class="bar-val" style="font-size:10px;">15K</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:3.7%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name" style="font-size:10px;">China 2023</span><span class="bar-val" style="font-size:10px;">77K</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:19%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name" style="font-size:10px;">China 2025</span><span class="bar-val">405K</span></div>
+      <div class="bar-track"><div class="bar-fill" style="width:100%"></div></div>
+    </div>
+    <div class="bar-row" style="margin-top:8px;">
+      <div class="bar-hd"><span class="bar-name" style="font-size:10px;">Europe 2023</span><span class="bar-val g" style="font-size:10px;">10.8K</span></div>
+      <div class="bar-track"><div class="bar-fill g" style="width:2.7%"></div></div>
+    </div>
+    <div class="bar-row">
+      <div class="bar-hd"><span class="bar-name" style="font-size:10px;">Europe 2025</span><span class="bar-val g">16.8K</span></div>
+      <div class="bar-track"><div class="bar-fill g" style="width:4.1%"></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════════ CH 03: POWERTRAIN ══════════════ -->
+<section class="ch">
+  <div class="ch-label rv"><span class="ch-num">03</span><span class="ch-tag">Powertrain Shift · China</span></div>
+  <h2 class="ch-title rv">From <em>0% to 28%</em><br>in Six Years</h2>
+  <p class="lead rv">China's heavy truck market shows the sharpest powertrain transition currently underway anywhere in mobility. In 2020, EVs had zero meaningful share. In 2025, they hold 28%, while diesel ICE has fallen from 91% to 46%.</p>
+
+  <div class="legend rv">
+    <div class="leg-item"><div class="leg-dot ev"></div>Battery EV</div>
+    <div class="leg-item"><div class="leg-dot fc"></div>Fuel Cell</div>
+    <div class="leg-item"><div class="leg-dot ng"></div>Natural Gas ICE</div>
+    <div class="leg-item"><div class="leg-dot" style="background:rgba(139,205,255,.22);border:1px solid rgba(139,205,255,.3)"></div>Diesel ICE</div>
+  </div>
+
+  <div class="rv" style="margin-top:14px;">
+    <div class="stk-yr">
+      <div class="stk-lbl">2020 · Total market: 1.6M trucks</div>
+      <div class="stk-bar">
+        <div class="stk-seg ev" style="width:0.3%;min-width:0;"></div>
+        <div class="stk-seg fc" style="width:0.3%;min-width:0;"></div>
+        <div class="stk-seg ng" style="width:9%">9%</div>
+        <div class="stk-seg ic" style="width:90.4%">91% diesel</div>
+      </div>
+    </div>
+    <div class="stk-yr">
+      <div class="stk-lbl">2022 · Total market: 0.5M trucks</div>
+      <div class="stk-bar">
+        <div class="stk-seg ev" style="width:5%">5%</div>
+        <div class="stk-seg fc" style="width:1%"></div>
+        <div class="stk-seg ng" style="width:8%">8%</div>
+        <div class="stk-seg ic" style="width:86%">86%</div>
+      </div>
+    </div>
+    <div class="stk-yr">
+      <div class="stk-lbl">2023 · Total market: 0.6M trucks</div>
+      <div class="stk-bar">
+        <div class="stk-seg ev" style="width:5%">5%</div>
+        <div class="stk-seg fc" style="width:1%"></div>
+        <div class="stk-seg ng" style="width:25%">25%</div>
+        <div class="stk-seg ic" style="width:69%">69%</div>
+      </div>
+    </div>
+    <div class="stk-yr">
+      <div class="stk-lbl">2024 · Total market: 0.6M trucks</div>
+      <div class="stk-bar">
+        <div class="stk-seg ev" style="width:13%">13%</div>
+        <div class="stk-seg fc" style="width:1%"></div>
+        <div class="stk-seg ng" style="width:30%">30%</div>
+        <div class="stk-seg ic" style="width:56%">56%</div>
+      </div>
+    </div>
+    <div class="stk-yr">
+      <div class="stk-lbl">2025 · Total market: 0.8M trucks</div>
+      <div class="stk-bar">
+        <div class="stk-seg ev" style="width:28%">28%</div>
+        <div class="stk-seg fc" style="width:1%"></div>
+        <div class="stk-seg ng" style="width:25%">25%</div>
+        <div class="stk-seg ic" style="width:46%">46%</div>
+      </div>
+    </div>
+  </div>
+
+  <p class="body rv" style="margin-top:16px;">Notice the natural gas peak: NG surged from 25% to 30% share in 2024, then retreated to 25% in 2025 as BEV improved. This is the classic "bridge technology" pattern: a cleaner interim solution crests just as the clean alternative reaches cost parity.</p>
+
+  <div class="insight rv">
+    <div class="insight-t">Why EREVs were skipped entirely</div>
+    <div class="insight-b">Extended-Range Electric Vehicles (battery EV with a backup fuel generator) seem logical given the charging gap. The market bypassed them. Reason: EREVs add mechanical complexity that reduces payload capacity and increases maintenance costs. Battery swap stations solve the charging problem more elegantly. The industry concluded EREVs offer fleet operators the worst of both worlds.</div>
+  </div>
+</section>
+
+<!-- ══════════════ CH 04: TCO ══════════════ -->
+<section class="ch dark">
+  <div class="ch-label rv"><span class="ch-num">04</span><span class="ch-tag">Economics · China · 2025</span></div>
+  <h2 class="ch-title rv">The Math Is<br><em>Getting There</em></h2>
+  <p class="lead rv">Total cost of ownership per kilometer is where the decision happens. BEV trucks now undercut diesel in China, but natural gas still wins on pure cost.</p>
+
+  <div class="tco-grid rv">
+    <div class="tco-card gas">
+      <div class="tco-name">Natural Gas ICE</div>
+      <div class="tco-total">$0.79</div>
+      <div class="tco-unit">USD / km, total</div>
+      <div class="tco-row"><span>Vehicle cost</span><span>$0.08</span></div>
+      <div class="tco-row"><span>Fuel</span><span>$0.22</span></div>
+      <div class="tco-row"><span>Infrastructure</span><span>$0.02</span></div>
+      <div class="tco-row"><span>Dwell cost</span><span>$0.00</span></div>
+      <div class="tco-row"><span>Driver, maint., insurance</span><span>$0.47</span></div>
+    </div>
+    <div class="tco-card bev">
+      <div class="tco-name">Battery Electric</div>
+      <div class="tco-total">$0.82</div>
+      <div class="tco-unit">USD / km, total</div>
+      <div class="tco-row"><span>Vehicle cost</span><span style="color:var(--accent3)">$0.19 ↑</span></div>
+      <div class="tco-row"><span>Energy (electricity)</span><span style="color:var(--accent2)">$0.13 ↓</span></div>
+      <div class="tco-row"><span>Infrastructure</span><span>$0.04</span></div>
+      <div class="tco-row"><span>Dwell cost</span><span>$0.04</span></div>
+      <div class="tco-row"><span>Driver, maint., insurance</span><span style="color:var(--accent2)">$0.42 ↓</span></div>
+    </div>
+    <div class="tco-card dsl">
+      <div class="tco-name">Diesel ICE</div>
+      <div class="tco-total">$0.93</div>
+      <div class="tco-unit">USD / km, total</div>
+      <div class="tco-row"><span>Vehicle cost</span><span>$0.06</span></div>
+      <div class="tco-row"><span>Fuel</span><span style="color:var(--accent3)">$0.39 ↑</span></div>
+      <div class="tco-row"><span>Infrastructure</span><span>$0.01</span></div>
+      <div class="tco-row"><span>Dwell cost</span><span>$0.00</span></div>
+      <div class="tco-row"><span>Driver, maint., insurance</span><span>$0.47</span></div>
+    </div>
+  </div>
+
+  <p class="body rv" style="margin-top:16px;">The critical read: BEV trucks save massively on fuel ($0.13 vs $0.39 for diesel) and modestly on maintenance. But the vehicle acquisition cost is 3x higher: $0.19/km amortized versus $0.06 for diesel. Natural gas trucks currently win on total cost, which explains why NG still holds 25% share. As battery prices continue falling, BEV will cross below $0.79/km, likely within 1-2 years for the Chinese market.</p>
+
+  <div class="pq rv"><p>"BEV trucks already beat diesel on TCO in China. They haven't yet beaten natural gas. That gap closes as battery packs get cheaper. And the regulations don't wait."</p></div>
+</section>
+
+<!-- ══════════════ CH 05: PLAYERS ══════════════ -->
+<section class="ch mid">
+  <div class="ch-label rv"><span class="ch-num">05</span><span class="ch-tag">Competitive Landscape</span></div>
+  <h2 class="ch-title rv">Traditional Giants<br>vs. <em>New Challengers</em></h2>
+  <p class="lead rv">Unlike passenger EVs (where Tesla created the premium segment before incumbents woke up), the electric truck market is being contested simultaneously by legacy OEMs and a wave of new entrants.</p>
+
+  <div class="player-sec rv">
+    <div class="player-sec-title">Traditional OEMs</div>
+    <div class="player-grid">
+      <div class="player-card">
+        <div class="pc-group">Daimler Truck</div>
+        <div class="pc-brand">Mercedes-Benz Trucks</div>
+        <div class="pc-origin">🇩🇪 Germany/Global</div>
+        <div class="pc-models">eActros 300, 400, 600, eEconic · eCascadia, eM2 (Freightliner) · eCanter (FUSO)</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">Volvo Group</div>
+        <div class="pc-brand">Volvo &amp; Renault Trucks</div>
+        <div class="pc-origin">🇸🇪🇫🇷 Sweden/France</div>
+        <div class="pc-models">FL, FH, FH Aero Electric · E-Tech D, E-Tech T · Mack LR Electric</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">Traton / VW Group</div>
+        <div class="pc-brand">Scania &amp; MAN</div>
+        <div class="pc-origin">🇸🇪🇩🇪 Sweden/Germany</div>
+        <div class="pc-models">25P, 40R, 45R, 45S BEV · eTGX, eTGS, eTGM</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">PACCAR</div>
+        <div class="pc-brand">DAF · Kenworth · Peterbilt</div>
+        <div class="pc-origin">🇳🇱🇺🇸 Netherlands/USA</div>
+        <div class="pc-models">XD/XF Electric · T680E, K270E · 579EV, 520EV</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">BYD</div>
+        <div class="pc-brand">BYD Commercial Vehicles</div>
+        <div class="pc-origin">🇨🇳 China/Global</div>
+        <div class="pc-models">8TT, 8R, 6F, T-Series</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">Chinese OEMs</div>
+        <div class="pc-brand">SANY · Sinotruk · FAW · Dongfeng</div>
+        <div class="pc-origin">🇨🇳 China / EU export</div>
+        <div class="pc-models">MOTA 1165, e263 · HOWO TX EV · J6P EV · Tianlong KL EV</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="player-sec rv" style="margin-top:24px;">
+    <div class="player-sec-title">Startups &amp; New Entrants</div>
+    <div class="player-grid">
+      <div class="player-card">
+        <div class="pc-group">US Startup</div>
+        <div class="pc-brand">Tesla</div>
+        <div class="pc-origin">🇺🇸 USA</div>
+        <div class="pc-models">Semi Standard Range · Semi Long Range (ramping volume 2026)</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">US Startup</div>
+        <div class="pc-brand">Nikola</div>
+        <div class="pc-origin">🇺🇸 USA</div>
+        <div class="pc-models">Tre BEV · Tre FCEV (hydrogen)</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">Swedish Startup</div>
+        <div class="pc-brand">Einride</div>
+        <div class="pc-origin">🇸🇪 Sweden</div>
+        <div class="pc-models">Autonomous eBots · remote-operated freight</div>
+      </div>
+      <div class="player-card">
+        <div class="pc-group">China / Belgium / US</div>
+        <div class="pc-brand">Windrose Technology</div>
+        <div class="pc-origin">🇨🇳🇧🇪🇺🇸 Global</div>
+        <div class="pc-models">E700, R700 EV, targeting EU market</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="insight rv" style="margin-top:20px;">
+    <div class="insight-t">The Chinese export play</div>
+    <div class="insight-b">Chinese manufacturers (SANY, BYD, Windrose) are now selling in Europe. They arrive with price advantages built from a domestic market that is 24× larger than Europe's. The same pattern that reshaped passenger EVs is beginning in trucks. European OEMs have a shrinking window to respond.</div>
+  </div>
+</section>
+
+<!-- ══════════════ CH 06: SPECS ══════════════ -->
+<section class="ch">
+  <div class="ch-label rv"><span class="ch-num">06</span><span class="ch-tag">Benchmark Models · 2026</span></div>
+  <h2 class="ch-title rv">The Vehicles<br>Setting the <em>Standards</em></h2>
+  <p class="body rv">Four commercial models define where the market stands today, from the Chinese export challenger to the European and North American long-haul benchmark.</p>
+
+  <div class="truck-grid">
+    <div class="truck-card rv">
+      <div class="truck-img-wrap">
+        <img src="DEPLOY/tesla.jpg" alt="Tesla Semi Long Range" class="truck-img">
+        <span class="truck-badge-ov badge prod">Production</span>
+      </div>
+      <div class="truck-info">
+        <span class="truck-name">Tesla Semi Long Range</span>
+        <div class="truck-stats">
+          <div class="tstat"><span class="tstat-v acc">805 km</span><span class="tstat-k">Range</span></div>
+          <div class="tstat"><span class="tstat-v">822 kWh</span><span class="tstat-k">Battery</span></div>
+          <div class="tstat"><span class="tstat-v">37.2 t</span><span class="tstat-k">GCW</span></div>
+          <div class="tstat"><span class="tstat-v">800 kW</span><span class="tstat-k">Power</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="truck-card rv d1">
+      <div class="truck-img-wrap">
+        <img src="DEPLOY/volvo.jpg" alt="Volvo FH Aero Electric" class="truck-img">
+        <span class="truck-badge-ov badge roll">Rollout 2026</span>
+      </div>
+      <div class="truck-info">
+        <span class="truck-name">Volvo FH Aero Electric</span>
+        <div class="truck-stats">
+          <div class="tstat"><span class="tstat-v acc">700 km</span><span class="tstat-k">Range</span></div>
+          <div class="tstat"><span class="tstat-v">780 kWh</span><span class="tstat-k">Battery</span></div>
+          <div class="tstat"><span class="tstat-v">48 t</span><span class="tstat-k">GCW</span></div>
+          <div class="tstat"><span class="tstat-v">460 kW</span><span class="tstat-k">Power</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="truck-card rv d2">
+      <div class="truck-img-wrap">
+        <img src="DEPLOY/mercedes.jpg" alt="Mercedes eActros 600" class="truck-img">
+        <span class="truck-badge-ov badge prod">Production</span>
+      </div>
+      <div class="truck-info">
+        <span class="truck-name">Mercedes eActros 600</span>
+        <div class="truck-stats">
+          <div class="tstat"><span class="tstat-v acc">500 km</span><span class="tstat-k">Range</span></div>
+          <div class="tstat"><span class="tstat-v">621 kWh</span><span class="tstat-k">Battery</span></div>
+          <div class="tstat"><span class="tstat-v">44 t</span><span class="tstat-k">GCW</span></div>
+          <div class="tstat"><span class="tstat-v">600 kW</span><span class="tstat-k">Power</span></div>
+        </div>
+      </div>
+    </div>
+    <div class="truck-card rv d3">
+      <div class="truck-img-wrap">
+        <img src="DEPLOY/sany--e263.jpg" alt="SANY e263" class="truck-img">
+        <span class="truck-badge-ov badge prod">Production</span>
+      </div>
+      <div class="truck-info">
+        <span class="truck-name">SANY e263</span>
+        <div class="truck-stats">
+          <div class="tstat"><span class="tstat-v acc">500+ km</span><span class="tstat-k">Range</span></div>
+          <div class="tstat"><span class="tstat-v">636 kWh</span><span class="tstat-k">Battery</span></div>
+          <div class="tstat"><span class="tstat-v">42 t</span><span class="tstat-k">GCW</span></div>
+          <div class="tstat"><span class="tstat-v">730 kW</span><span class="tstat-k">Power</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p class="body rv" style="font-size:10px;color:var(--txt-muted);margin-top:4px;">GCW = Gross Combined Weight. Sources: Tesla official spec sheet, Daimler/Mercedes, Volvo Trucks, SANY/electrive.</p>
+
+  <div class="insight rv" style="margin-top:18px;">
+    <div class="insight-t">What the specs tell us</div>
+    <div class="insight-b">The 700km+ range barrier has been broken by multiple models. The Tesla Semi's 805km and the Volvo FH Aero's 700km mean long-haul range anxiety is now a charging infrastructure problem, not a battery technology problem. The SANY MOTA's 1,100kWh record-run pack shows where the ceiling is, and it's high enough to make highway charging a solvable engineering challenge, not a physics constraint.</div>
+  </div>
+</section>
+
+<!-- ══════════════ SANY MOTA 1165 ══════════════ -->
+<section class="mota-section rv">
+  <div class="mota-img-wrap">
+    <img src="DEPLOY/SANY-MOTA-1165.jpg" alt="SANY MOTA 1165" class="mota-img">
+  </div>
+  <div class="mota-record-badge">&#9733; Guinness World Record &middot; 2024</div>
+  <div class="mota-model">SANY MOTA 1165</div>
+  <div class="mota-hero-num">817.5</div>
+  <div class="mota-hero-unit">km</div>
+  <div class="mota-hero-sub">single charge &middot; electric heavy truck &middot; world record</div>
+  <div class="mota-kpis">
+    <div class="mota-kpi">
+      <span class="mota-kpi-val">1,100 kWh</span>
+      <span class="mota-kpi-key">Battery</span>
+    </div>
+    <div class="mota-kpi">
+      <span class="mota-kpi-val">800 kW</span>
+      <span class="mota-kpi-key">Peak Power</span>
+    </div>
+    <div class="mota-kpi">
+      <span class="mota-kpi-val">40.6 t</span>
+      <span class="mota-kpi-key">GCW</span>
+    </div>
+  </div>
+  <p class="mota-context">This is not a commercial truck. It was engineered for one purpose: to show what the physics allow. Today's ceiling is tomorrow's baseline.</p>
+  <p class="mota-note">Record demonstrator, not available at commercial scale. Source: Guinness World Records; ChinaSPV for battery and charging specs.</p>
+</section>
+
+<!-- ══════════════ OPTION X ══════════════ -->
+<section class="optx">
+  <div class="optx-badge rv">Option X</div>
+  <h2 class="ch-title rv" style="font-size:clamp(18px,5.5vw,28px);">When Automakers<br>Pivot to <em>Military</em></h2>
+  <p class="lead rv">An echo from a past era is returning. Automotive manufacturers are finding new customers in defense. The overlap with EV powertrain expertise is becoming commercially relevant.</p>
+  <p class="body rv">Geopolitical realignment and increased NATO defense budgets are creating a lane that commercial mobility companies are beginning to explore. From military logistics fleets to specialized dual-use platforms, manufacturers with excess production capacity or market share pressure are listening.</p>
+  <div class="insight warn rv">
+    <div class="insight-t">What to watch in H2 2026</div>
+    <div class="insight-b">Anti-EV lobbying cost automakers an estimated $70B in misallocated capital (Electrek, May 2026). Companies that bet against the transition are now considering defense as a revenue hedge. Watch for dual-use platform announcements: electric military logistics vehicles share drivetrain architecture with commercial EV trucks. The tech transfer runs both ways.</div>
+  </div>
+</section>
+
+<!-- ══════════════ CONCLUSION ══════════════ -->
+<section class="concl">
+  <div class="concl-line rv"></div>
+  <h2 class="concl-title rv">What the Numbers<br>Mean for <em>What's Next</em></h2>
+  <p class="lead rv">The electric truck transition is real, accelerating, and deeply concentrated. Here's what fleet operators, OEMs, and infrastructure investors need to take from the 2025 data:</p>
+
+  <ul class="concl-list">
+    <li class="rv"><b>The China playbook is the template.</b> Battery swap networks + aggressive manufacturing pricing + regulatory pressure = mass adoption. Europe and North America are running the same play 3-5 years behind.</li>
+    <li class="rv d1"><b>Short-haul is solved. Long-haul is the bottleneck.</b> Urban delivery trucks are already cost-competitive on TCO. Long-haul heavy trucks still face the ultra-fast highway charging gap: that's the next critical infrastructure build-out, and the next investment opportunity.</li>
+    <li class="rv d2"><b>Battery cost is the remaining pivot point.</b> When packs reach $80/kWh, the TCO math flips conclusively in favor of BEV across all segments. At current trajectory, that's 2027–2028 for most markets.</li>
+    <li class="rv d3"><b>Natural gas peaked.</b> NG trucks hit 30% in China in 2024, then retreated to 25% in 2025 as BEV economics improved. In Europe, regulators are skipping the bridge altogether. Natural gas is a transition, not a destination.</li>
+    <li class="rv d4"><b>Watch SANY, FAW, and BYD in Europe.</b> Chinese manufacturers now field world-class products with significant cost advantages. The pattern that played out in passenger EVs is beginning in trucks. Western incumbents have a shrinking window.</li>
+  </ul>
+</section>
+
+<!-- ══════════════ FOOTER ══════════════ -->
+<footer class="footer">
+  <svg class="footer-logo" viewBox="0 0 421.74 30.13" xmlns="http://www.w3.org/2000/svg" aria-label="Astara Intelligence" role="img"><g><g style="isolation:isolate"><g style="isolation:isolate"><path style="fill:#fff" d="M154.37,26.92V3.8h4.29v23.12h-4.29Z"/><path style="fill:#fff" d="M164.91,26.92V3.8h3.53l14.5,17.84h-1.75V3.8h4.23v23.12h-3.53l-14.47-17.84h1.75v17.84h-4.26Z"/><path style="fill:#fff" d="M196.36,26.92V7.43h-7.66v-3.63h19.62v3.63h-7.66v19.49h-4.29Z"/><path style="fill:#fff" d="M215.85,23.29h13.05v3.63h-17.34V3.8h16.88v3.63h-12.59v15.86ZM215.52,13.41h11.5v3.54h-11.5v-3.54Z"/><path style="fill:#fff" d="M233.69,26.92V3.8h4.29v19.49h12.09v3.63h-16.38Z"/><path style="fill:#fff" d="M253.47,26.92V3.8h4.29v19.49h12.09v3.63h-16.38Z"/><path style="fill:#fff" d="M273.26,26.92V3.8h4.29v23.12h-4.29Z"/><path style="fill:#fff" d="M294.6,27.25c-1.81,0-3.46-.29-4.97-.88s-2.82-1.42-3.95-2.49c-1.12-1.08-1.99-2.33-2.61-3.77-.62-1.43-.93-3.02-.93-4.76s.31-3.33.93-4.76c.62-1.43,1.49-2.69,2.63-3.77,1.13-1.08,2.46-1.91,3.96-2.49,1.51-.58,3.19-.88,5.04-.88s3.69.32,5.27.96c1.57.64,2.9,1.58,3.98,2.81l-2.71,2.64c-.9-.9-1.88-1.57-2.92-2-1.05-.43-2.2-.64-3.45-.64s-2.36.2-3.39.59c-1.02.4-1.91.96-2.66,1.68-.75.73-1.33,1.59-1.75,2.58-.42.99-.63,2.08-.63,3.27s.21,2.25.63,3.25c.42,1,1,1.87,1.75,2.59.75.73,1.63,1.29,2.64,1.68,1.01.4,2.14.59,3.37.59,1.14,0,2.25-.18,3.32-.54,1.07-.36,2.09-.97,3.06-1.83l2.41,3.2c-1.19.97-2.58,1.7-4.16,2.2-1.59.5-3.21.74-4.86.74ZM299.59,23.75v-8.62h4.03v9.18l-4.03-.56Z"/><path style="fill:#fff" d="M313.59,23.29h13.05v3.63h-17.34V3.8h16.88v3.63h-12.59v15.86ZM313.26,13.41h11.5v3.54h-11.5v-3.54Z"/><path style="fill:#fff" d="M331.43,26.92V3.8h3.53l14.5,17.84h-1.75V3.8h4.23v23.12h-3.53l-14.47-17.84h1.75v17.84h-4.26Z"/><path style="fill:#fff" d="M368.89,27.25c-1.78,0-3.42-.29-4.92-.88-1.5-.58-2.8-1.42-3.91-2.49-1.11-1.08-1.98-2.33-2.59-3.77-.62-1.43-.93-3.02-.93-4.76s.31-3.33.93-4.76c.62-1.43,1.49-2.69,2.61-3.77,1.12-1.08,2.43-1.91,3.93-2.49,1.5-.58,3.14-.88,4.92-.88,1.89,0,3.62.33,5.19.97s2.88,1.61,3.96,2.89l-2.78,2.61c-.86-.9-1.81-1.58-2.84-2.03s-2.15-.68-3.34-.68-2.32.2-3.32.59c-1,.4-1.87.96-2.61,1.68-.74.73-1.32,1.59-1.73,2.58-.42.99-.63,2.08-.63,3.27s.21,2.28.63,3.27c.42.99,1,1.85,1.73,2.58.74.73,1.61,1.29,2.61,1.68,1,.4,2.11.59,3.32.59s2.3-.23,3.34-.68,1.98-1.14,2.84-2.06l2.78,2.61c-1.08,1.28-2.4,2.25-3.96,2.91-1.56.66-3.3.99-5.22.99Z"/><path style="fill:#fff" d="M386.5,23.29h13.05v3.63h-17.34V3.8h16.88v3.63h-12.59v15.86ZM386.17,13.41h11.5v3.54h-11.5v-3.54Z"/></g></g><g style="opacity:.4"><path style="fill:#fff" d="M23.35,15.51c-.04-4.72-3.89-8.51-8.61-8.48-4.72.04-8.51,3.89-8.48,8.61.04,4.69,3.85,8.48,8.54,8.48,4.73-.02,8.56-3.87,8.54-8.6,0,0,0,0,0,0M27.02,15.51v10.84c0,.29-.24.52-.53.53h-2.6c-.29,0-.53-.23-.53-.52,0,0,0-.01,0-.02v-2.87c-2.17,2.6-5.24,3.97-8.61,3.97-6.77,0-12.14-5.3-12.14-11.94S7.97,3.56,14.81,3.56s12.21,5.3,12.21,11.94h0Z"/><path style="fill:#fff" d="M31.22,26.88c-.31,0-.56-.25-.57-.56v-2.2c0-.31.26-.56.57-.57h11.84c2.13,0,3.54-1.43,3.54-3.24s-1.4-3.04-3.54-3.27l-6.24-.7c-3.8-.43-6.81-2.77-6.81-6.34s3.04-6.47,7.21-6.47h10.34c.31,0,.56.25.57.56v2.2c0,.31-.26.56-.57.57h-10.34c-2.13,0-3.54,1.43-3.54,3.1s1.4,2.87,3.54,3.1l6.24.7c3.8.43,6.81,2.8,6.81,6.47s-3.04,6.64-7.21,6.64h-11.84Z"/><path style="fill:#fff" d="M71.02,3.53c.3-.01.55.22.57.52v2.2c0,.31-.25.56-.56.57h-7.84v19.45c.01.3-.22.55-.52.57h-2.54c-.3.01-.55-.22-.57-.52V6.87h-7.84c-.31,0-.56-.23-.57-.54v-2.17c-.01-.3.22-.55.52-.57h19.35Z"/><path style="fill:#fff" d="M92.67,15.51c-.04-4.72-3.89-8.51-8.61-8.48-4.72.04-8.51,3.89-8.48,8.61.04,4.69,3.85,8.48,8.54,8.48,4.73-.02,8.56-3.87,8.54-8.6M96.34,15.51v10.84c0,.29-.24.52-.53.53h-2.6c-.29,0-.53-.23-.53-.52v-2.87c-2.17,2.6-5.24,3.97-8.61,3.97-6.77,0-12.14-5.3-12.14-11.94s5.37-11.94,12.21-11.94,12.21,5.3,12.21,11.94Z"/><path style="fill:#fff" d="M113.59,4.1v2.27c0,.29-.24.53-.53.53-5.54.33-8.71,3.14-8.71,7.37v12.04c0,.31-.25.56-.56.57h-2.54c-.3.01-.55-.22-.57-.52V4.1c-.01-.3.22-.55.52-.57h2.54c.31,0,.56.25.57.56v2.8c2.03-2.03,4.9-3.24,8.64-3.37.31-.02.58.23.6.54Z"/><path style="fill:#fff" d="M135.01,15.51c-.04-4.72-3.89-8.51-8.61-8.48-4.72.04-8.51,3.89-8.48,8.61.04,4.69,3.85,8.48,8.54,8.48,4.73-.02,8.56-3.87,8.54-8.6M138.68,15.51v10.84c0,.29-.24.52-.53.53h-2.6c-.29,0-.53-.23-.53-.52v-2.87c-2.17,2.6-5.24,3.97-8.61,3.97-6.77,0-12.14-5.3-12.14-11.94s5.37-11.94,12.21-11.94,12.21,5.3,12.21,11.94Z"/></g></g></svg>
+  <div class="footer-note">This report is for informational purposes only. Data sourced from IEA Global EV Outlook 2026, company official specifications (Tesla, Daimler Truck, Volvo Trucks, SANY), Guinness World Records, and public industry sources. Figures are estimates unless specifically noted.</div>
+  <div class="footer-issue">In Depth #84 &middot; June 2026 &middot; Astara Intelligence</div>
+</footer>
+
+<script>
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(e){ if(e.isIntersecting) e.target.classList.add('on'); });
+  },{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>
